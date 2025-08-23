@@ -1,132 +1,137 @@
-# MLOPs-Production-Ready-Machine-Learning-Project
+Perfect 👍 Adding **badges/shields** will make your README look more professional and polished for GitHub.
 
-Youtube Playlist: https://youtube.com/playlist?list=PLkz_y24mlSJZvJOj1UXiJPVRQrNFdNEXX&si=FRFLpnve9MS6Rii9
+Here’s the updated **README.md** with badges included:
 
-- Anaconda: https://www.anaconda.com/
-- Vs code: https://code.visualstudio.com/download
-- Git: https://git-scm.com/
-- Flowchart: https://whimsical.com/
-- MLOPs Tool: https://www.evidentlyai.com/
-- MongoDB: https://account.mongodb.com/account/login
-- Data link: https://www.kaggle.com/datasets/moro23/easyvisa-dataset
+````markdown
+# US Visa Approval Status Prediction
 
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.95%2B-teal?logo=fastapi)
+![MongoDB](https://img.shields.io/badge/MongoDB-Integration-green?logo=mongodb)
+![Docker](https://img.shields.io/badge/Docker-Enabled-blue?logo=docker)
+![AWS](https://img.shields.io/badge/AWS-Deployed-orange?logo=amazon-aws)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## Git commands
+This project is a **production-ready MLOps application** for predicting **US visa approval status**.
 
+---
+
+## 🚀 Features
+
+- ⚡ **FastAPI** web interface for predictions  
+- 🛠️ **Model training pipeline**  
+- 📂 **MongoDB integration** for data storage  
+- 🐳 **Docker support** for containerization  
+- ☁️ **AWS deployment via GitHub Actions** for CI/CD  
+
+---
+
+## ⚙️ Setup
+
+### 1. Clone the repository
 ```bash
-git add .
+git clone <repo-url>
+cd US-visa-approval-status-project
+````
 
-git commit -m "Updated"
-
-git push origin main
-```
-
-
-## How to run?
+### 2. Create and activate a conda environment
 
 ```bash
 conda create -n visa python=3.8 -y
-```
-
-```bash
 conda activate visa
 ```
+
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Workflow:
+### 4. Set environment variables
 
-1. constants
-2. entity
-3. components
-4. pipeline
-5. Main file
-
-
-
-### Export the  environment variable
 ```bash
-
-
-export MONGODB_URL="mongodb+srv://<username>:<password>...."
-
+export MONGODB_URL="mongodb+srv://<username>:<password>@cluster0.mongodb.net/?retryWrites=true&w=majority"
 export AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID>
-
 export AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY>
+```
 
+---
+
+## 📌 Usage
+
+### 1. Start the FastAPI server
+
+```bash
+python app.py
+```
+
+Visit 👉 [http://localhost:8080](http://localhost:8080) in your browser.
+
+### 2. Train the model
+
+Send a `GET` request to the `/train` endpoint or visit:
+
+```
+http://localhost:8080/train
+```
+
+### 3. Make predictions
+
+Fill out the form on the main page and submit to get visa approval predictions.
+
+---
+
+## 📂 Project Structure
+
+* **app.py** → FastAPI application entry point
+* **us\_visa/** → Core package (components, pipeline, utils, etc.)
+* **requirements.txt** → Python dependencies
+* **Dockerfile** → Docker configuration
+* **config/** → Model and schema configuration files
+* **notebook/** → Jupyter notebooks for EDA & feature engineering
+
+---
+
+## ☁️ AWS CI/CD Deployment
+
+### Steps:
+
+1. **Login** to AWS console
+2. **Create IAM user** for deployment
+
+   * Permissions:
+
+     * `AmazonEC2ContainerRegistryFullAccess`
+     * `AmazonEC2FullAccess`
+3. **Create ECR repo** to store Docker image
+4. **Create EC2 machine** (Ubuntu)
+5. **Install Docker** on EC2
+6. **Configure EC2** as self-hosted runner
+7. **Setup GitHub secrets**:
+
+   * `AWS_ACCESS_KEY_ID`
+   * `AWS_SECRET_ACCESS_KEY`
+   * `AWS_DEFAULT_REGION`
+   * `ECR_REPO`
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+## ✨ Notes
+
+You can further customize this README as needed for your project.
 
 ```
 
+---
 
-# AWS-CICD-Deployment-with-Github-Actions
+🔥 This will look very professional on GitHub with badges at the top.  
 
-## 1. Login to AWS console.
-
-## 2. Create IAM user for deployment
-
-	#with specific access
-
-	1. EC2 access : It is virtual machine
-
-	2. ECR: Elastic Container registry to save your docker image in aws
-
-
-	#Description: About the deployment
-
-	1. Build docker image of the source code
-
-	2. Push your docker image to ECR
-
-	3. Launch Your EC2 
-
-	4. Pull Your image from ECR in EC2
-
-	5. Lauch your docker image in EC2
-
-	#Policy:
-
-	1. AmazonEC2ContainerRegistryFullAccess
-
-	2. AmazonEC2FullAccess
-
-	
-## 3. Create ECR repo to store/save docker image
-    - Save the URI: 315865595366.dkr.ecr.us-east-1.amazonaws.com/visarepo
-
-	
-## 4. Create EC2 machine (Ubuntu) 
-
-## 5. Open EC2 and Install docker in EC2 Machine:
-	
-	
-	#optinal
-
-	sudo apt-get update -y
-
-	sudo apt-get upgrade
-	
-	#required
-
-	curl -fsSL https://get.docker.com -o get-docker.sh
-
-	sudo sh get-docker.sh
-
-	sudo usermod -aG docker ubuntu
-
-	newgrp docker
-	
-# 6. Configure EC2 as self-hosted runner:
-    setting>actions>runner>new self hosted runner> choose os> then run command one by one
-
-
-# 7. Setup github secrets:
-
-   - AWS_ACCESS_KEY_ID
-   - AWS_SECRET_ACCESS_KEY
-   - AWS_DEFAULT_REGION
-   - ECR_REPO
-
-    
-
+Do you also want me to add a **demo architecture diagram (pipeline + FastAPI + MongoDB + AWS)** section in the README for extra clarity?
+```

@@ -3,5 +3,5 @@ US-visa-project
 
 MangoDb ->
 username = pritdeshmukh1803
-password = ZF7PHLlizLniHmdK
-connection string > mongodb+srv://pritdeshmukh1803:ZF7PHLlizLniHmdK@cluster0.kpbp50m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+password = Iqg4LQP1Wdruzt3c
+connection string > mongodb+srv://pritdeshmukh1803:Iqg4LQP1Wdruzt3c@cluster0.kpbp50m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
